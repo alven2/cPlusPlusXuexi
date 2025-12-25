@@ -321,7 +321,7 @@ std::cout << '\n';
 
 
     // console
-    std::cout << "rplaced, and estoy probando commit";
+    std::cout << "replaced, and estoy probando commit";
 
     return 0;
 };
