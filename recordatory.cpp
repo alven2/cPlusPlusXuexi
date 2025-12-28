@@ -303,7 +303,12 @@ std::cout << '\n';
 
 
 
-    // sizeof(), determinar el tamanio de un tipado, variable y valores.
+    // sizeof(), determina el tamanio del tipado, luego lo multiplica por la determinacion de la cantidad de el array, (por ahora solo se array en este caso);
+
+    /*
+    examples
+    int array[] = {23, 292, 382, 22} // 4bytes(tipado) x 5(elementos) = 20bytes; 
+    */
 
     // ultimo std::cout para contar la cantidad de elementos en un array.
 
