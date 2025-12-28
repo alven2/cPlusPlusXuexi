@@ -10,8 +10,8 @@ for (int i = 1; i <= column; i++) {
         for (int j = 1; j <= rows; j++) {
             std::cout << karacter;
             std::cout << '\n';
-
-    {
+};
+};
     return 0;
 
 };
