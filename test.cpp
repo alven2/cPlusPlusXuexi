@@ -1,6 +1,7 @@
 #include <iostream>
 
 int main() {
+    
 int column; std::cin >> column;
 int rows; std::cin >> rows;
 char karacter; std::cin >> karacter;
@@ -10,7 +11,7 @@ for (int i = 1; i <= column; i++) {
             std::cout << karacter;
             std::cout << '\n';
 
+    {
     return 0;
-};
-};
+
 };
