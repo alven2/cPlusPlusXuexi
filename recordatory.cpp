@@ -144,14 +144,14 @@ int main() {
     double y = 4;
     double b = 23.23;
     double z;
-    //z = std::min(y, b);
-    // z = std::max(y, b);
-    // z = pow(2, 4); potencia
-    // z = sqrt(9); cuadrado
-    //z = abs(3); distancia positi
-    // z = round(b); redon cercano
-    // z = floor(b); redon down
-    // z = ceil(b); redon hacia up
+    z = std::min(y, b);
+    z = std::max(y, b);
+    z = pow(2, 4); potencia
+    z = sqrt(9); cuadrado
+    z = abs(3); distancia positi
+    z = round(b); redon cercano
+    z = floor(b); redon down
+    z = ceil(b); redon hacia up
 
 
 
@@ -171,7 +171,7 @@ int main() {
 
 
     // switch
-    /*  switch() {
+      switch() {
       case 1:
       jsjsjsjs;
       break;
@@ -179,7 +179,6 @@ int main() {
       djdjdj
       break;
    }
-   */
 
 
 
@@ -194,7 +193,7 @@ int main() {
 
     // strings functions
     // parentesis no siempre es parametro, tambien significa ejecucion. //
-    /*
+    
     .length(); cantidad de caracteres
     .empty(); vacio
     .clear(); limpiar
@@ -203,13 +202,14 @@ int main() {
     .insert(0, '@'); igual que append pero indice customizado
     .find(''); buscar
     .erase(0, 3); clear pero custom indice
-    */
+    
 
 
 
 
-    /* WHILE // si es false, termina.
-    1)
+     WHILE // si es false, termina.
+
+    // ejemplo 1
     char continuar = 's';
     while (continuar == 's' || continuar == 'S') {
         cout << "Ejecutando programa..." << endl;
@@ -217,24 +217,23 @@ int main() {
         cin >> continuar;
     }
     cout << "Programa terminado" << endl;
-    2)
+    // ejemplo 2 cinquecento
     int dec;
-    cin >> dec;
+    std::cin >> dec;
     while (dec--) {
     int cqt;
-    cin >> cqt;
-    cout << ((cqt + 99) / 100)  * 1<< '\n';
+    std::cin >> cqt;
+    std::cout << ((cqt + 99) / 100)  * 1<< '\n';
 }
-    //
+    
     // DO WHILE  si es false, igual mostrara 1 vez y termina , si es true, sigue.
+
+
     int nammber = 10;
     do {
-        cout << "Do-while: " << nammber << endl;
+        std::cout << "Do-while: " << nammber << std::endl;
     } while (nammber < 5);
-    return 0;
-}
 
-*/
 
 
 
@@ -263,32 +262,35 @@ int main() {
 
     // break and continue = BREAK = si se cumplio, se para la loop.  CONTINUE = para saltar lo mencionado y seguir sin ello.
 
-    /*
+    
 for (int hey = 1; hey < 20; hey++) {
 if (hey == 15) {
 	break; // continue
 }
 std::cout << hey << '\n';
 }
-*/
+
 
 
 
 
     // nested loops, un loop dentro de otro.
 
-    /*
-int column; cin >> column;
-int rows; cin >> rows;
-char karacter; cin >> karacter;
+int column; 
+std::cin >> column;
+int rows; 
+std::cin >> rows;
+char karacter; 
+std::cin >> karacter;
 
 for (int i = 1; i <= column; i++) {
-		for (int j = 1; j <= rows; j++) {
-			std::cout << karacter;
-}
-std::cout << '\n';
-}
-*/
+        for (int j = 1; j <= rows; j++) {
+            std::cout << karacter;
+};
+            std::cout << '\n';
+
+};
+
 
 
 

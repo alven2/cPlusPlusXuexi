@@ -1,19 +1,13 @@
 #include <iostream>
 int main() {
     
-int column; 
-std::cin >> column;
-int rows; 
-std::cin >> rows;
-char karacter; 
-std::cin >> karacter;
+int nammber = 10;
+    int dec;
+    std::cin >> dec;
+    while (dec--) {
+    int cqt;
+    std::cin >> cqt;
+    std::cout << ((cqt + 99) / 100)  * 1<< '\n';
 
-for (int i = 1; i <= column; i++) {
-        for (int j = 1; j <= rows; j++) {
-            std::cout << karacter;
-            std::cout << '\n';
-};
-};
-    return 0;
-
+}
 };
