@@ -1,9 +1,9 @@
 // no ejecutar directamente, es un recordatorio de sintaxis y funciones basicas en c++17
 #include <iostream> // etiqueta basica
-#include <vector> // biblioteca de funciones
 #include <cmath> // matematica
 #include <ctime> // para tiempo actual
 #include <iomanip> // biblioteca para cout y cin
+#include <vector> // biblioteca de funciones vector 
 using namespace std; // recomendado solo para proyectos pquenos. puede causar muchos bugs.
 
 
@@ -273,7 +273,6 @@ std::cout << hey << '\n';
 
 
 
-
     // nested loops, un loop dentro de otro.
 
 int column; 
@@ -297,7 +296,7 @@ for (int i = 1; i <= column; i++) {
 
     // ramdom number generator no, but close.
 
-    srand(time(NULL)/*0*/); // para numeros aleatorios de de segundos desde 1970 hasta hoy. agarran numeros aleatores ahi. si no se pone esta, no importa, pero no tendra aleatorios.
+    srand(time(0)); // para numeros aleatorios de de segundos desde 1970 hasta hoy. agarran numeros aleatores ahi. si no se pone esta, no importa, pero no tendra aleatorios.
 
     int num33 = (rand() % 6) + 1;
     std::cout << num33 << '\n';
