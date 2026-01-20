@@ -131,7 +131,7 @@ int main() {
 
 
 
-    // mini programa de cin y cout
+    // mini programa de std::cin y cout::cout (prompt y log)
     std::string name;
     int age;
 
@@ -321,9 +321,9 @@ for (int i = 1; i <= column; i++) {
     int array[] = {23, 292, 382, 22} // 4bytes(tipado) x 5(elementos) = 20bytes; 
     */
 
-    // ultimo std::cout para contar la cantidad de elementos en un array.
-
     std::cout << "variable x es de " << sizeof(x) << "bytes" << endl;
+
+    // ultimo std::cout para contar la cantidad de elementos en un array.
     
     std::cout << sizeof(array)/sizeof(array[0]) << '\n';
 
