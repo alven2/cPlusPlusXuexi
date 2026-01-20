@@ -314,7 +314,8 @@ for (int i = 1; i <= column; i++) {
     // ultimo std::cout para contar la cantidad de elementos en un array.
 
     std::cout << "variable x es de " << sizeof(x) << "bytes" << endl;
-    std::cout << sizeof(array)/sizeof(std::string) << '\n';
+    
+    std::cout << sizeof(array)/sizeof(array[0]) << '\n';
 
 
 
