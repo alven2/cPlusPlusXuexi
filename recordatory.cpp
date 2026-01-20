@@ -2,8 +2,9 @@
 #include <iostream> // etiqueta basica
 #include <cmath> // matematica
 #include <ctime> // para tiempo actual
-#include <iomanip> // biblioteca para cout y cin
+#include <iomanip> // biblioteca de formato para salida, no para leer.
 #include <vector> // biblioteca de funciones vector 
+#include <string> // para trabajar con strings sin errores tipo concatenar y comparar.
 using namespace std; // recomendado solo para proyectos pquenos. puede causar muchos bugs.
 
 
