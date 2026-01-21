@@ -139,6 +139,9 @@ int main() {
     std::cin >> name;
     std::cout << name;
     
+    
+    
+    
     // getLine, es para cin, para que sea un cin capaz de leer todo el contenido escrito con espacios, ejemplo "Juan Hernandez".
     
     std::getLine(cin, name);
