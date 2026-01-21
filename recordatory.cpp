@@ -87,18 +87,18 @@ int main() {
 
     std::string sapo = "holas ";
 
-    std:: string array[] = {
+    // al agregar [], se convierte en array, obviamente puede ser de numero o string con su tipado corrspondiente.
+    std::string array[] = {
         "array",
         "otro",
         "otroooo"
     };
 
-     std:: string array2[] = {
+     std::string array2[] = {
         "array2",
         "otro2",
         "otroooo2"
     };
-
 
     std::cout << "mirame soy un array y tengo este value " + array[0] << '\n';
 
@@ -130,6 +130,7 @@ int main() {
 
 
 
+
     // mini programa de cin y cout
     std::string name;
     int age;
@@ -137,6 +138,11 @@ int main() {
     std::cout << "whats your name?";
     std::cin >> name;
     std::cout << name;
+    
+    // getLine, es para cin, para que sea un cin capaz de leer todo el contenido escrito con espacios, ejemplo "Juan Hernandez".
+    
+    std::getLine(cin, name);
+    
 
 
 
