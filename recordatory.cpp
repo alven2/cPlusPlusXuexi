@@ -33,7 +33,7 @@ using equisde = int;
 
 
 
-// functions, void significa que no devueve valor, solo inprime o para mod varaibles, puedes usar cualquier tipado. son bloques reusables
+// functions, void significa que no devueve valor, solo inprime o para modificar variables, puedes usar cualquier tipado. son bloques reusables
 
 void happyBirthday() {
 
