@@ -18,6 +18,7 @@ int saiCueco = 2021;
 
 
 // namespace // para variables repetidas y su uso
+
 namespace first {
     int x = 1;
 }
@@ -67,50 +68,47 @@ int main() {
 
     happyBirthday();
 
-    string neim = "alvenn";
-    string lastNeim = "qiu";
+    std::string neim = "alvenn";
+    std::string lastNeim = "qiu";
     std::string result = nombreApellido(neim, lastNeim);
     std::cout << result;
 
 
 
 
-    // bases bariables
-
+    // VARIABLESSSSSSSSSSSS
+    // numeros enteros
     int cero = 0;
-
     int x = 10;
 
-    holas a = 'a';
 
+    // decimales
+    double decis = 10.10;
+    double mixed = x + cero + first::x;
+
+
+    // typedefs
+    holas a = 'a';
     equisde e = 20;
 
-    std::string sapo = "holas ";
 
-    // al agregar [], se convierte en array, obviamente puede ser de numero o string con su tipado corrspondiente.
+    // strings
+    std::string sapo = "holas ";
+    // al agregar [], se convierte en array, obviamente puede ser de numero o string con su tipado corrspondiente. ademas si se le pone valor numerico al parentesis tipo [5], le indicas la cantidad de elementos que tiene que tener el array.
     std::string array[] = {
         "array",
         "otro",
         "otroooo"
     };
+    std::string shuxis[] = {83, 65, 72};
 
-     std::string array2[] = {
-        "array2",
-        "otro2",
-        "otroooo2"
-    };
 
-    std::cout << "mirame soy un array y tengo este value " + array[0] << '\n';
-
-    double decis = 10.10;
-
+    // caracter individual
     char A = 'a';
 
+
+    // booleanos
     bool message = true;
-
-    double mixed = x + cero + first::x;
-
-
 
 
     // bariables constantes
@@ -143,7 +141,6 @@ int main() {
     
     
     // getLine, es para cin, para que sea un cin capaz de leer todo el contenido escrito con espacios, ejemplo "Juan Hernandez".
-    
     std::getLine(cin, name);
     
 
@@ -203,7 +200,6 @@ int main() {
 
     // strings functions
     // parentesis no siempre es parametro, tambien significa ejecucion. //
-    
     .length(); cantidad de caracteres
     .empty(); vacio
     .clear(); limpiar
@@ -217,8 +213,7 @@ int main() {
 
 
 
-     WHILE // si es false, termina.
-
+    // WHILE // si es false, termina.
     // ejemplo 1
     char continuar = 's';
     while (continuar == 's' || continuar == 'S') {
@@ -237,8 +232,6 @@ int main() {
 }
     
     // DO WHILE  si es false, igual mostrara 1 vez y termina , si es true, sigue.
-
-
     int nammber = 10;
     do {
         std::cout << "Do-while: " << nammber << std::endl;
@@ -250,7 +243,6 @@ int main() {
 
     // for loop = declarar variable, condicion y por ultimo ejecucion.
     // and forEach loop
-
     for (int i = 0; i <= 10; i++) {
         std::cout << "hola mundo\n";
     };
@@ -270,9 +262,7 @@ int main() {
 
 
 
-    // break and continue = BREAK = si se cumplio, se para la loop.  CONTINUE = para saltar lo mencionado y seguir sin ello.
-
-    
+    // break and continue = BREAK = si se cumplio, se para la loop.  CONTINUE = para saltar lo mencionado y seguir sin ello.   
 for (int hey = 1; hey < 20; hey++) {
 if (hey == 15) {
 	break; // continue
@@ -284,7 +274,6 @@ std::cout << hey << '\n';
 
 
     // nested loops, un loop dentro de otro.
-
 int column; 
 std::cin >> column;
 int rows; 
@@ -305,7 +294,6 @@ for (int i = 1; i <= column; i++) {
 
 
     // ramdom number generator no, but close.
-
     srand(time(0)); // para numeros aleatorios de de segundos desde 1970 hasta hoy. agarran numeros aleatores ahi. si no se pone esta, no importa, pero no tendra aleatorios.
 
     int num33 = (rand() % 6) + 1;
@@ -330,7 +318,33 @@ for (int i = 1; i <= column; i++) {
 
 
 
+    // Fill() // rellenar con un value deseado a un rango especificado de un array, tiene 3 argumentos, 
+    // el 1 es el variable con la que se trabaja,
+    // el 2 es para el valor o variable tipo cantidad,
+    // el 3 es para poner el valor con la que se llenara.
+    // normalmente sin fill, se tendria que hacer manualmente
+    std::string comidas[3] = {pizza, pizza, pizza};
+    for(std::string comida : comidas) {
+       std::cout << comida << '\n';
+    };
 
+    // ahora con fill y mejor tecnica
+    const int tamanio = 100;
+    std::string foods[tamanio];
+    fill(foods, foods + tamanio, "berenjena");
+    for(std::string food : foods) {
+        std::cout << food;
+    };
+
+    // para dividir el contenido en 2 o 3 partes, en esta parte es un poco confuso, pero dandolo facil se explica que si se va agregando un fill, el inicio se cambia por valor dado en la primera parte, y asi sucesivamente hasta la ultima parte que agarra el valor tamanio normalmente. no se si me explique jajaja.
+    const int tamanio = 99;
+    std::string foods[tamanio];
+    fill(foods, foods + (tamanio/3), "berenjena");
+    fill(foods + (tamanio/3), foods + (tamanio/3)*2, "frijoles");
+    fill(foods + (tamanio/3)*2, foods + tamanio, "tofu");
+    for(std::string food : foods) {
+        std::cout << food;
+    };
 
 
 
@@ -339,6 +353,8 @@ for (int i = 1; i <= column; i++) {
 
     // console
     std::cout << "replaced, and estoy probando";
+    std::cout << "mirame soy un array y tengo este value " + array[0] << '\n';
+
 
     return 0;
 };
