@@ -273,7 +273,7 @@ std::cout << hey << '\n';
 
 
 
-    // nested loops, un loop dentro de otro.
+    // nested loops, un loop dentro de otro. first row, then column.
 int column; 
 std::cin >> column;
 int rows; 
@@ -345,6 +345,32 @@ for (int i = 1; i <= column; i++) {
     for(std::string food : foods) {
         std::cout << food;
     };
+
+
+
+
+    // multidimensional array
+    // primer cuadro de row dejarlo vacio por convencion, segundo es de column, poner 3 para que sea 3 elementos por fila.
+    std::string dimensioArray[][3] = {{"xbox", "xbox360", "xboxOne"},
+                                      {"ps", "ps2", "ps3"},
+                                      {"mediapad", "y92019", "nova5t"}};
+    // se puede iterar asi, pero es menos practico
+    std::cout << dimensioArray[0][0] << " ";
+    std::cout << dimensioArray[1][0] << " ";
+    std::cout << dimensioArray[2][2] << " ";
+    //iteramos asi mejor con nested loop
+    int fila = sizeof(dimensioArray)/sizeof(dimensioArray[0]);
+    int columna = sizeof(dimensioArray[0])/sizeof(dimensioArray[0][0]);
+
+    for (int i = 0; i < fila; i++) {
+        for (int j = 0; j < columna; j++) {
+            
+        }
+        std::cout << '\n';
+    };
+
+
+
 
 
 
