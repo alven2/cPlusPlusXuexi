@@ -364,7 +364,7 @@ for (int i = 1; i <= column; i++) {
 
     for (int i = 0; i < fila; i++) {
         for (int j = 0; j < columna; j++) {
-            
+            std::cout << dimensioArray[i][j] << "";
         }
         std::cout << '\n';
     };
