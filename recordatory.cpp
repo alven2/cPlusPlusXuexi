@@ -372,7 +372,7 @@ for (int i = 1; i <= column; i++) {
 
 
 
-// Memory adress, basicamente la direccion de un elemento en codigos, para mostarlo se usa &.
+// Memory adress, basicamente la direccion de un elemento en codigos, para mostarlo se usa &. 
 std::string broo = "bro";
 std::cout << &broo << '\n';
 
