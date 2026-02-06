@@ -375,8 +375,13 @@ for (int i = 1; i <= column; i++) {
 // Memory adress, basicamente la direccion de un elemento en codigos, para mostarlo se usa &. 
 std::string broo = "bro";
 std::cout << &broo << '\n';
-
-
+// ejemplo con lo siguiente, pasar valor vs pasar referencia a una funcion, aclaramos variables con valor despues le asignamos a intercambios entre ellos.
+std::string equis = "holy";
+std::string ye = "shit";
+std::string temp;
+equis = ye;
+temp = equis;
+ye = temp;
 
 
 
