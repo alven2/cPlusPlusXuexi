@@ -396,6 +396,7 @@ int main() {
     std::string broo = "bro";
     std::cout << &broo << '\n';
     // ejemplo con lo siguiente, pasar valor vs pasar referencia a una funcion, aclaramos variables con valor despues le modificamos a intercambios entre ellos.
+    
     // estoy simulando como si estuviera afuera de este bloque para declarar el void.
     std::string equis = "holy";
     std::string ye = "shit";
@@ -411,7 +412,7 @@ int main() {
 
     // estoy simulando como si estuviera afuera de el bloque para crear un void, obviamente hay que declalarlo primero antes del main pero simulo que ya lo tengo.
 
-    void eswapear(std::string equis, std::string ye) {
+    void eswapear(std::string &equis, std::string &ye) {
         std::string temp;
 
         equis = ye;
