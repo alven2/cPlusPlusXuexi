@@ -34,7 +34,7 @@ using equisde = int;
 
 
 
-// functions, void significa que no devueve valor, solo inprime o para modificar variables, puedes usar cualquier tipado. son bloques reusables
+// functions, void significa que no devueve valor, solo inprime o para modificar variables. son bloques reusables
 
 void happyBirthday() {
 
@@ -400,10 +400,12 @@ int main() {
     std::string equis = "holy";
     std::string ye = "shit";
 
+    eswapear(equis, ye);
 
-
-    std::cout << "equis: " << equis << '\n';
+    std::cout << "equis: " << equis << '\n;
     std::cout << "ye: " << ye << '\n';
+
+    // al imprimir nos sale todo igual con su valor original y no se ha cambiado por lo que hemos asignado, eso es debido a que cuando declaramos la funcion, dentro del parametro sacamos copia
 
     // estoy simulando como si estuviera afuera de el bloque para crear un void, obviamente hay que declalarlo primero antes del main pero simulo que ya lo tengo.
 
