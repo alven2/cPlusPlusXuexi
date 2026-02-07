@@ -375,13 +375,22 @@ for (int i = 1; i <= column; i++) {
 // Memory adress, basicamente la direccion de un elemento en codigos, para mostarlo se usa &. 
 std::string broo = "bro";
 std::cout << &broo << '\n';
-// ejemplo con lo siguiente, pasar valor vs pasar referencia a una funcion, aclaramos variables con valor despues le asignamos a intercambios entre ellos.
+// ejemplo con lo siguiente, pasar valor vs pasar referencia a una funcion, aclaramos variables con valor despues le modificamos a intercambios entre ellos.
+// estoy simulando como si estuviera afuera de este bloque para declarar el void.
 std::string equis = "holy";
 std::string ye = "shit";
-std::string temp;
-equis = ye;
-temp = equis;
-ye = temp;
+
+
+
+std::cout << "equis: " << equis << '\n';
+std::cout << "ye: " << ye << '\n';
+
+// estoy simulando como si estuviera afuera de el bloque para crear un void, obviamente hay que declalarlo primero antes del main pero simulo que ya lo tengo.
+
+void eswapear(std::string equis, std::string ye) {
+    
+};
+
 
 
 
