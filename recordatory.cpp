@@ -3,7 +3,7 @@
 #include <cmath> // matematica
 #include <ctime> // para tiempo actual
 #include <iomanip> // biblioteca de formato para salida, no para leer.
-#include <vector> // biblioteca de funciones vector 
+#include <vector> // biblioteca de funciones vector
 #include <string> // para trabajar con strings sin errores tipo concatenar y comparar.
 using namespace std; // recomendado solo para proyectos pquenos. puede causar muchos bugs.
 
@@ -100,7 +100,11 @@ int main() {
         "otro",
         "otroooo"
     };
-    std::string shuxis[] = {83, 65, 72};
+    std::string shuxis[] = {
+        83,
+        65,
+        72
+    };
 
 
     // caracter individual
@@ -136,13 +140,13 @@ int main() {
     std::cout << "whats your name?";
     std::cin >> name;
     std::cout << name;
-    
-    
-    
-    
+
+
+
+
     // getLine, es para cin, para que sea un cin capaz de leer todo el contenido escrito con espacios, ejemplo "Juan Hernandez".
     std::getLine(cin, name);
-    
+
 
 
 
@@ -178,14 +182,14 @@ int main() {
 
 
     // switch
-      switch() {
-      case 1:
-      jsjsjsjs;
-      break;
-      default:
-      djdjdj
-      break;
-   }
+    switch() {
+        case 1:
+        jsjsjsjs;
+        break;
+        default:
+        djdjdj
+        break;
+    }
 
 
 
@@ -208,7 +212,7 @@ int main() {
     .insert(0, '@'); igual que append pero indice customizado
     .find(''); buscar
     .erase(0, 3); clear pero custom indice
-    
+
 
 
 
@@ -226,11 +230,11 @@ int main() {
     int dec;
     std::cin >> dec;
     while (dec--) {
-    int cqt;
-    std::cin >> cqt;
-    std::cout << ((cqt + 99) / 100)  * 1<< '\n';
-}
-    
+        int cqt;
+        std::cin >> cqt;
+        std::cout << ((cqt + 99) / 100) * 1<< '\n';
+    }
+
     // DO WHILE  si es false, igual mostrara 1 vez y termina , si es true, sigue.
     int nammber = 10;
     do {
@@ -254,7 +258,7 @@ int main() {
     };
 
     // level 2 con foreach loop
-    for (std::string arra2 : array2) {
+    for (std::string arra2: array2) {
         std::cout << arra2 << '\n';
     };
 
@@ -262,32 +266,32 @@ int main() {
 
 
 
-    // break and continue = BREAK = si se cumplio, se para la loop.  CONTINUE = para saltar lo mencionado y seguir sin ello.   
-for (int hey = 1; hey < 20; hey++) {
-if (hey == 15) {
-	break; // continue
-}
-std::cout << hey << '\n';
-}
+    // break and continue = BREAK = si se cumplio, se para la loop.  CONTINUE = para saltar lo mencionado y seguir sin ello.
+    for (int hey = 1; hey < 20; hey++) {
+        if (hey == 15) {
+            break; // continue
+        }
+        std::cout << hey << '\n';
+    }
 
 
 
 
     // nested loops, un loop dentro de otro. first row, then column.
-int column; 
-std::cin >> column;
-int rows; 
-std::cin >> rows;
-char karacter; 
-std::cin >> karacter;
+    int column;
+    std::cin >> column;
+    int rows;
+    std::cin >> rows;
+    char karacter;
+    std::cin >> karacter;
 
-for (int i = 1; i <= column; i++) {
+    for (int i = 1; i <= column; i++) {
         for (int j = 1; j <= rows; j++) {
             std::cout << karacter;
-};
-            std::cout << '\n';
+        };
+        std::cout << '\n';
 
-};
+    };
 
 
 
@@ -306,33 +310,37 @@ for (int i = 1; i <= column; i++) {
 
     /*
     examples
-    int array[] = {23, 292, 382, 22} // 4bytes(tipado) x 5(elementos) = 20bytes; 
+    int array[] = {23, 292, 382, 22} // 4bytes(tipado) x 5(elementos) = 20bytes;
     */
 
     std::cout << "variable x es de " << sizeof(x) << "bytes" << endl;
 
     // ultimo std::cout para contar la cantidad de elementos en un array.
-    
+
     std::cout << sizeof(array)/sizeof(array[0]) << '\n';
 
 
 
 
-    // Fill() // rellenar con un value deseado a un rango especificado de un array, tiene 3 argumentos, 
+    // Fill() // rellenar con un value deseado a un rango especificado de un array, tiene 3 argumentos,
     // el 1 es el variable con la que se trabaja,
     // el 2 es para el valor o variable tipo cantidad,
     // el 3 es para poner el valor con la que se llenara.
     // normalmente sin fill, se tendria que hacer manualmente
-    std::string comidas[3] = {pizza, pizza, pizza};
-    for(std::string comida : comidas) {
-       std::cout << comida << '\n';
+    std::string comidas[3] = {
+        pizza,
+        pizza,
+        pizza
+    };
+    for(std::string comida: comidas) {
+        std::cout << comida << '\n';
     };
 
     // ahora con fill y mejor tecnica
     const int tamanio = 100;
     std::string foods[tamanio];
     fill(foods, foods + tamanio, "berenjena");
-    for(std::string food : foods) {
+    for(std::string food: foods) {
         std::cout << food;
     };
 
@@ -342,7 +350,7 @@ for (int i = 1; i <= column; i++) {
     fill(foods, foods + (tamanio/3), "berenjena");
     fill(foods + (tamanio/3), foods + (tamanio/3)*2, "frijoles");
     fill(foods + (tamanio/3)*2, foods + tamanio, "tofu");
-    for(std::string food : foods) {
+    for(std::string food: foods) {
         std::cout << food;
     };
 
@@ -351,9 +359,21 @@ for (int i = 1; i <= column; i++) {
 
     // multidimensional array
     // primer cuadro de row dejarlo vacio por convencion, segundo es de column, poner 3 para que sea 3 elementos por fila.
-    std::string dimensioArray[][3] = {{"xbox", "xbox360", "xboxOne"},
-                                      {"ps", "ps2", "ps3"},
-                                      {"mediapad", "y92019", "nova5t"}};
+    std::string dimensioArray[][3] = {{
+        "xbox",
+        "xbox360",
+        "xboxOne"
+    },
+        {
+            "ps",
+            "ps2",
+            "ps3"
+        },
+        {
+            "mediapad",
+            "y92019",
+            "nova5t"
+        }};
     // se puede iterar asi, pero es menos practico
     std::cout << dimensioArray[0][0] << " ";
     std::cout << dimensioArray[1][0] << " ";
@@ -372,24 +392,28 @@ for (int i = 1; i <= column; i++) {
 
 
 
-// Memory adress, basicamente la direccion de un elemento en codigos, para mostarlo se usa &. 
-std::string broo = "bro";
-std::cout << &broo << '\n';
-// ejemplo con lo siguiente, pasar valor vs pasar referencia a una funcion, aclaramos variables con valor despues le modificamos a intercambios entre ellos.
-// estoy simulando como si estuviera afuera de este bloque para declarar el void.
-std::string equis = "holy";
-std::string ye = "shit";
+    // Memory adress, basicamente la direccion de un elemento en codigos, para mostarlo se usa &.
+    std::string broo = "bro";
+    std::cout << &broo << '\n';
+    // ejemplo con lo siguiente, pasar valor vs pasar referencia a una funcion, aclaramos variables con valor despues le modificamos a intercambios entre ellos.
+    // estoy simulando como si estuviera afuera de este bloque para declarar el void.
+    std::string equis = "holy";
+    std::string ye = "shit";
 
 
 
-std::cout << "equis: " << equis << '\n';
-std::cout << "ye: " << ye << '\n';
+    std::cout << "equis: " << equis << '\n';
+    std::cout << "ye: " << ye << '\n';
 
-// estoy simulando como si estuviera afuera de el bloque para crear un void, obviamente hay que declalarlo primero antes del main pero simulo que ya lo tengo.
+    // estoy simulando como si estuviera afuera de el bloque para crear un void, obviamente hay que declalarlo primero antes del main pero simulo que ya lo tengo.
 
-void eswapear(std::string equis, std::string ye) {
-    
-};
+    void eswapear(std::string equis, std::string ye) {
+        std::string temp;
+
+        equis = ye;
+        temp = equis;
+        ye = temp;
+    };
 
 
 
