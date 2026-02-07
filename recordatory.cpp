@@ -412,7 +412,7 @@ int main() {
 
     // estoy simulando como si estuviera afuera de el bloque para crear un void, obviamente hay que declalarlo primero antes del main pero simulo que ya lo tengo.
 
-    void eswapear(std::string &equis, std::string &ye) {
+    void eswapear(std::string equis, std::string ye) {
         std::string temp;
 
         equis = ye;
