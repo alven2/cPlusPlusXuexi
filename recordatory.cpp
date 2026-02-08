@@ -115,7 +115,7 @@ int main() {
     bool message = true;
 
 
-    // bariables constantes
+    // bariables constantes, para que un tipo de datos sea mas seguro, tipo referencias y pointers
     const double pi = 1.4765;
     const int three = 3;
 
