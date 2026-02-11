@@ -403,7 +403,7 @@ int main() {
 
     eswapear(equis, ye);
 
-    std::cout << "equis: " << equis << '\n;
+    std::cout << "equis: " << equis << '\n';
     std::cout << "ye: " << ye << '\n';
 
     // al imprimir nos sale todo igual con su valor original y no se ha cambiado por lo que hemos asignado, eso es debido a que cuando declaramos la funcion, dentro del parametro se saca copia del valor original por el memory adress y no el de su bloque que era su valor qe debia ser asignado, esto es pasar valor. 
@@ -419,6 +419,12 @@ int main() {
         temp = equis;
         ye = temp;
     };
+
+
+
+
+    // pointers son variables qe guarda el memory adress de otros variables
+
 
 
 
