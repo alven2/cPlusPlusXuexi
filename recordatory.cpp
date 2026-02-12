@@ -396,7 +396,7 @@ int main() {
     std::string broo = "bro";
     std::cout << &broo << '\n';
     // ejemplo con lo siguiente, pasar valor vs pasar referencia a una funcion, aclaramos variables con valor despues le modificamos a intercambios entre ellos.
-    
+
     // estoy simulando como si estuviera afuera de este bloque para declarar el void.
     std::string equis = "holy";
     std::string ye = "shit";
@@ -406,8 +406,8 @@ int main() {
     std::cout << "equis: " << equis << '\n';
     std::cout << "ye: " << ye << '\n';
 
-    // al imprimir nos sale todo igual con su valor original y no se ha cambiado por lo que hemos asignado, eso es debido a que cuando declaramos la funcion, dentro del parametro se saca copia del valor original por el memory adress y no el de su bloque que era su valor qe debia ser asignado, esto es pasar valor. 
-    
+    // al imprimir nos sale todo igual con su valor original y no se ha cambiado por lo que hemos asignado, eso es debido a que cuando declaramos la funcion, dentro del parametro se saca copia del valor original por el memory adress y no el de su bloque que era su valor qe debia ser asignado, esto es pasar valor.
+
     // para pasar REFERENCIA que si corrige eso, se agrega & a los variables declaramos en el void. SIMPLEMENTE AGREGALE & AL VOID.
 
     // estoy simulando como si estuviera afuera de el bloque para crear un void, obviamente hay que declalarlo primero antes del main pero simulo que ya lo tengo.
