@@ -424,6 +424,10 @@ int main() {
 
 
     // pointers son variables qe guarda el memory adress de otros variables
+    // aveces es mas facil trabajar con adresees con pointers
+    // & = adress
+    // * = acceder a adresss
+
 
 
 
