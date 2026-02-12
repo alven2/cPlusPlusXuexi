@@ -1,4 +1,4 @@
-// no ejecutar directamente, es un recordatorio de sintaxis y funciones basicas en c++17
+// no ejecutar directamente, es un recordatorio de sintaxis y funciones basicas en c++
 #include <iostream> // etiqueta basica
 #include <cmath> // matematica
 #include <ctime> // para tiempo actual
@@ -427,6 +427,22 @@ int main() {
     // aveces es mas facil trabajar con adresees con pointers
     // & = adress
     // * = acceder a adresss
+
+    // exmple 1
+    std::string path = "hola Mundo"; // base
+    std::string *pPath = &path; // pointer
+    std::cout << pPath << '\n'; // te saldra la direccion code
+    std::cout << *pPath << '\n'; // te saldra el valor del variable, osea su valor original
+
+    // exmple 2
+    std::string freePizzas[5] = {"pizza1", "pizza2", "pizza3"}; // base
+    std::string *pFreePizzas = freePizzas; // pointer，como un array ya es un adress por defecto, no le pusimos &.
+    std::cout << FreePizzas << '\n'; // saldra adress
+    std::cout << *pFreePizzas << '\n'; // saldra el primer elemento de este array
+
+
+    
+
 
 
 
