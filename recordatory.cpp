@@ -426,7 +426,7 @@ int main() {
     // pointers son variables qe guarda el memory adress de otros variables
     // aveces es mas facil trabajar con adresees con pointers
     // & = adress
-    // * = acceder a adresss
+    // * = significa declarar un pointer y acceder al valor de tal direccion, este ultimo se llama desreferenciar.
 
     // exmple 1
     std::string path = "hola Mundo"; // base
@@ -443,6 +443,45 @@ int main() {
 
     
 
+    // null pointers, son pointers con valor null, osea que no estan sosteniendo a ninguna adress. es util para saber si un adress ha sido asignado o no a un pointer.
+    // creamos el nullptr
+    int *pointer = nullptr;
+    // aca un variablesito
+    int chadis = 123;
+    // aca cogemos el variablesito para el asignar al pointer, no ponemos * porque solo estamos asignando con otro var, no modificando directamente.
+    pointer = &chadis;
+    // verificar si fue asignado o sigue el nullptr que asignamos.
+    if(point == nullptr) {
+        std::cout << "adress no hay";
+    } else {
+        std::cout << "adress asignado";
+        std::cout << *chadis;
+    }; // en la consola saldra asignado y el valor, si quito el int chadis saldria que no esta asignado y sucesivamente.
+
+
+
+
+    /* capas de la memoria en c++ de mas baja a alta.
+    1: texto codigo
+    2: datos variables
+    3: stack/pila (variables, funciones, returns guardado por el compilador)
+    4: heap/monton (memoria dinamica que es exclusivo para el programador y es la que se solicita con new/malloc y liberada con delete/free, en pocas palabras es la memoria de gran tamanio y gestion manual).
+    */
+
+
+
+
+    // ESTE ES CAPA HEAP //
+    // dynamic memory, memoria que es ubicado despues de que el programa ha de ser compilado y ejecutando, es util cuando no sabemos cuanta memoria necesitamos para hacer el programa mas flexible, tipo cuando se recibe inputs del usuario y no saber que es lo que va a enviar.
+    int *pNumeritos = NULL;
+    // para asignar mas (rather😂) guardar al heap que el stack
+    // no ponemos * al pNumeritos porque no declaramos un nuevo pointer y tampoco para acceder y cambiar a su valor/valorEnAdress, estamos asignandole una orden que en este caso es apartar el dato al heap.
+    pNumeritos = new int;
+    // aca si ya una vez tenemos apartado, ponemos * para cambiarle directamente el valor/valorEnAdress
+    *pNumeritos = 21;
+
+    std::cout << "adress: " << pNumeritos << '\n'; // sale adress mas largo y diferente ya que obviamente esta en un lugar diferente.
+    std::cout << "valor: " << *pNumeritos << '\n'; // sale : "valor 21"
 
 
 
