@@ -461,7 +461,7 @@ int main() {
 
 
 
-    /* capas de la memoria en c++ de mas baja a alta.
+    /* CAPAS de la memoria en c++ de mas baja a alta.
     1: texto codigo
     2: datos variables
     3: stack/pila (variables, funciones, returns guardado por el compilador)
@@ -472,7 +472,7 @@ int main() {
 
 
     // ESTE ES CAPA HEAP //
-    // dynamic memory, memoria que es ubicado despues de que el programa ha de ser compilado y ejecutando, es util cuando no sabemos cuanta memoria necesitamos para hacer el programa mas flexible, tipo cuando se recibe inputs del usuario y no saber que es lo que va a enviar.
+    // dynamic memory, memoria que es util cuando no sabemos cuanta memoria necesitamos para hacer el programa mas flexible, tipo cuando se recibe inputs del usuario y no saber que es lo que va a enviar.
     int *pNumeritos = NULL;
     // para asignar mas (rather😂) guardar al heap que el stack
     // no ponemos * al pNumeritos porque no declaramos un nuevo pointer y tampoco para acceder y cambiar a su valor/valorEnAdress, estamos asignandole una orden que en este caso es apartar el dato al heap.
@@ -483,7 +483,27 @@ int main() {
     std::cout << "adress: " << pNumeritos << '\n'; // sale adress mas largo y diferente ya que obviamente esta en un lugar diferente.
     std::cout << "valor: " << *pNumeritos << '\n'; // sale : "valor 21"
 
+    // cuando usas new, casi siempre la acompanias con delete para borrarlo cuando no lo necesites, no lo borra tipo para que no sirva, sino para dejar de almacenar en la heap.
+    delete pNumeritos;
 
+    // A CONTINUACION UN EJEMPLO DE SU USO CON UN CIN, PRACTICAR BASTANTE ES MUY UTIL.
+    char *pGrados = NULL;
+    int choice;
+    std::cout << "cuantos grados en letras insertaras?" << '\n';
+    std::cin >> choice;
+
+    pGrados = new char[choice]; 
+
+    for (int i = 0; i < choice; i++) {
+        std::cout << "introduce grados #" << i + 1 << ":;";
+        std::cin >> pGrados[i];
+    }
+
+    for (int i = 0; i < choice; i++) {
+        std::cout << pGrades[i]; << "";
+    }
+
+    delete[] pGrados;
 
 
 
