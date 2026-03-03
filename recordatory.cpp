@@ -397,7 +397,7 @@ int main() {
     std::cout << &broo << '\n';
     // ejemplo con lo siguiente, pasar valor vs pasar referencia a una funcion, aclaramos variables con valor despues le modificamos a intercambios entre ellos.
 
-    // estoy simulando como si estuviera afuera de este bloque para declarar el void.
+    // aca simulas como si ya tienes declarado el void superior.
     std::string equis = "holy";
     std::string ye = "shit";
 
@@ -408,9 +408,9 @@ int main() {
 
     // al imprimir nos sale todo igual con su valor original y no se ha cambiado por lo que hemos asignado, eso es debido a que cuando declaramos la funcion, dentro del parametro se saca copia del valor original por el memory adress y no el de su bloque que era su valor qe debia ser asignado, esto es pasar valor.
 
-    // para pasar REFERENCIA que si corrige eso, se agrega & a los variables declaramos en el void. SIMPLEMENTE AGREGALE & AL VOID.
+    // para pasar REFERENCIA que siii corrige eso, se agrega & a los variables declaramos en el void. SIMPLEMENTE AGREGALE & AL VOID.
 
-    // estoy simulando como si estuviera afuera de el bloque para crear un void, obviamente hay que declalarlo primero antes del main pero simulo que ya lo tengo.
+    // estoy simulando como si estuviera afuera de el bloque de abajo para crear un void, obviamente hay que declalarlo primero antes del main pero simulo que ya lo tengo.
 
     void eswapear(std::string equis, std::string ye) {
         std::string temp;
@@ -504,6 +504,73 @@ int main() {
     }
 
     delete[] pGrados;
+
+
+
+
+    // RECURSION, una tecnica de programacion en donde una funcion se invoca a si mismo.
+    // rompe conceptos completos a unos que son pasos simples pero repetitivos,
+    // ventajas, menos codigo y mas limpia y apto para busquedas y ordenar algoritmos. desventajas, consume mucha memoria y es mas lenta.
+    // tiene 2 modos, iterativos y el principal del tema.
+    
+    // ejemplo de ITERATIVE 1.0
+    // aca simulas como si ya tienes declarado el void superior.
+
+    walk(100) // imprime 100 veces you take steps.
+
+    // estoy simulando como si estuviera afuera de el bloque de abajo para crear un void, obviamente hay que declalarlo primero antes del main pero simulo que ya lo tengo.
+    void walk(int steps) {
+        for(int i = 0; i < steps; i++){
+            std::cout << "You take Steps'\n'";
+        }
+    }
+    // 1.0
+
+    // ejemplo de RECURSIVE 1.1, hace lo mismo que el codigo iterativo, por lo que este caso no es tan util. en el 2.0 es mejor.
+    // aca simulas como si ya tienes declarado el void superior.
+
+    walk(100) // imprime 100 veces you take steps.
+
+    // estoy simulando como si estuviera afuera de el bloque de abajo para crear un void, obviamente hay que declalarlo primero antes del main pero simulo que ya lo tengo.
+    void walk(int steps) {
+    if(steps > 0) {
+        std::cout << "you take a steb"; //
+        walk(steps -1);
+        }  
+    }
+    // 1.1
+
+    // ejemplo de iterative de factorial 2.0
+    // aca simulas como si ya tienes declarado el void superior.
+
+    std::cout << factorial(10); // sale 3628800
+
+    // estoy simulando como si estuviera afuera de el bloque de abajo para crear un void, obviamente hay que declalarlo primero antes del main pero simulo que ya lo tengo.
+
+    int factorial(int num) {
+        int result = 1;
+        for(int 1 = 1; i <= num; i++) {
+            result = result * 1;
+        }
+        return result;
+    }
+    // 2.0
+
+    // ejemplo de recursive de factorial 2.1
+    // aca simulas como si ya tienes declarado el void superior.
+
+    std::cout << factorial(10); // 3628800
+
+    // estoy simulando como si estuviera afuera de el bloque de abajo para crear un void, obviamente hay que declalarlo primero antes del main pero simulo que ya lo tengo.
+
+    int factorial(int num) {
+            if(num > 1) {
+                return num * factorial(num - 1);
+        } else {
+                return 1;
+        }
+    }
+    // 2.1
 
 
 
